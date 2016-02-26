@@ -1,0 +1,5 @@
+Flask == 0.10.1
+nltk == 3.1
+pickleDB == 0.4
+wikipedia == 1.4.0
+simplejson == 3.8.1
