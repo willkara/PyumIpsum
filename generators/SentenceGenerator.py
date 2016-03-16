@@ -12,20 +12,20 @@ class SentenceGenerator(object):
         """
         self.cache = Cache.Cache()
 
-    def generateModel(self, subject):
+    def generate_model(self, subject):
         """
         Generate a model for the specified subject/word
         :param subject: The subject/word to base the model off of.
         :return: A SubjectModel object.
         """
         try:
-            subjectModel = self.cache.get(subject)
+            subject_model = self.cache.get(subject)
 
-            if subjectModel is None:
-                subjectModel = SubjectModel.SubjectModel(subject)
-                subjectModel.setup_model_db()
-                self.cache.add(subject, subjectModel)
+            if subject_model is None:
+                subject_model = SubjectModel.SubjectModel(subject)
+                subject_model.setup_model_db()
+                self.cache.add(subject, subject_model)
 
-            return subjectModel
+            return subject_model
         except wikipedia.exceptions.DisambiguationError as e:
             raise

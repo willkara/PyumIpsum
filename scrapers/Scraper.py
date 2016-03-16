@@ -9,7 +9,8 @@ class Scraper(object):
         if source == 'wikipedia':
             return self._get_wikipedia_content(term)
 
-    def _get_wikipedia_content(self,keyword):
+    @staticmethod
+    def _get_wikipedia_content(keyword):
         """
         Scrape and return the content of a wikipedia page.
         :param keyword: The keyword to search for.

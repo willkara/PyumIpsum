@@ -11,7 +11,8 @@ class LanguageProcessor(object):
     def __init__(self):
         pass
 
-    def get_word_count(self, content, size=10):
+    @staticmethod
+    def get_word_count(content, size=10):
         """
         Return a list of the most common words (sans stop words) within a given text.
         :param content: The text to go over.

@@ -12,6 +12,6 @@ I will be setting up a demo website and offical API site shortly.
 
 ## TO-DO
 
-1. Extend the `saving` of models to a SQLite database. This should allow models to be able to be saved isntead of just in memory.
+1. Extend the `saving` of models to a SQLite database. This should allow models to be able to be saved instead of just in memory.
 2. Research possibility of other scrapers.
 3. Setup demo site and official API site.
