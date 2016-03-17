@@ -73,8 +73,8 @@ class Subject(Resource):
 
 
 # Main entry point for the program
-api.add_resource(Subject, '/api/subject/<word>')
-api.add_resource(Info, '/api/info')
+api.add_resource(Subject, '{0}/subject/<word>'.format(settings.API_URL))
+api.add_resource(Info, '/{0}/info'.format(settings.API_URL))
 
 if __name__ == '__main__':
     application.run(debug=settings.DEBUG, port=settings.PORT)
