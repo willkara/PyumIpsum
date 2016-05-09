@@ -61,14 +61,16 @@ class Subject(Resource):
             for i in range(0, int(sentence_amount)):
                 sentences.append(model.generate_string())
 
-            data = {'status': "0",
-                    'sentences': sentences,
-                    'common_words': model.word_counts
-                    }
+            data = {}
+            data['status'] = '0'
+            data['sentences'] = sentences
+            data['common_words'] = model.word_counts
         except wikipedia.exceptions.DisambiguationError as dis:
-            data = {'status': "1",
-                    'error': dis.error
-                    }
+
+            data = {}
+            data['status'] = '1'
+            data['error'] = dis.error
+
         return Response(json.dumps(data), mimetype='application/json')
 
 
