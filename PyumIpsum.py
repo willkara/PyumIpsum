@@ -69,7 +69,7 @@ class Subject(Resource):
             data = {'status': "1",
                     'error': dis.error
                     }
-        return Response(json.dumps(data), mimetype='text/json')
+        return Response(json.dumps(data), mimetype='application/json')
 
 
 # Main entry point for the program
